@@ -3,14 +3,7 @@ package org.example.adventofcode.puzzle
 import org.example.adventofcode.util.FileLoader
 
 
-class Range {
-    private val beginning: Int
-    private val ending: Int
-
-    constructor(beginning: Int, ending: Int) {
-        this.beginning = beginning
-        this.ending = ending
-    }
+class Range(private val beginning: Int, private val ending: Int) {
 
     fun fullyOverlap(range: Range): Boolean {
         return (beginning <= range.beginning && ending >= range.ending)
@@ -62,7 +55,7 @@ object Day04 {
 }
 
 fun main() {
-    var day = "day04"
+    val day = "day04"
     val dayObj = Day04
 
     println("Example 1: ${dayObj.part1("/${day}_example.txt")}")
