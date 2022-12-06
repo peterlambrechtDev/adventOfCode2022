@@ -7,8 +7,6 @@ object Day06 {
         val stringLines = FileLoader.loadFromFile<String>(filePath)
 
         return findMarkerAndReturnPosition(stringLines[0], 4)
-
-        return 0
     }
 
     fun part2(filePath: String): Int {
